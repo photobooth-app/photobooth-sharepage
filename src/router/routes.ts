@@ -1,14 +1,14 @@
-import type { RouteRecordRaw } from 'vue-router';
+import type { RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import('@/layouts/MainLayout.vue'),
     children: [
       {
         path: '',
-        component: () => import('pages/IndexPage.vue'),
-        props: (route) => ({ url: route.query.url }),
+        component: () => import('@/pages/IndexPage.vue'),
+        props: route => ({ url: route.query.url }),
       },
     ],
   },
@@ -17,8 +17,8 @@ const routes: RouteRecordRaw[] = [
   // but you can also remove it
   {
     path: '/:catchAll(.*)*',
-    component: () => import('pages/ErrorNotFound.vue'),
+    component: () => import('@/pages/ErrorNotFound.vue'),
   },
-];
+]
 
-export default routes;
+export default routes

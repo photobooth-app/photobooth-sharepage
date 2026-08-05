@@ -1,11 +1,11 @@
 // Configuration for your app
 // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file
 
-import { defineConfig } from '#q-app/wrappers'
+import { defineConfig } from '#q-app'
 import { fileURLToPath } from 'node:url'
 import { viteSingleFile } from 'vite-plugin-singlefile'
 
-export default defineConfig((ctx) => {
+export default defineConfig(ctx => {
   return {
     // https://v2.quasar.dev/quasar-cli-vite/prefetch-feature
     // preFetch: true,
@@ -59,11 +59,7 @@ export default defineConfig((ctx) => {
         // relative public dir (otherwise assets would load from / always which is unlikely true for the download portal)
         // ref: https://github.com/quasarframework/quasar/discussions/14984#discussioncomment-4245661
         viteConf.base = ''
-        viteConf.plugins?.push(
-          viteSingleFile({
-            /*  options */
-          }),
-        )
+        viteConf.plugins?.push(viteSingleFile({/*  options */}))
       },
 
       // viteVuePluginOptions: {},
@@ -93,10 +89,6 @@ export default defineConfig((ctx) => {
               initialIsOpen: false,
             },
             vueTsc: true,
-            eslint: {
-              lintCommand: 'eslint -c ./eslint.config.js "./src*/**/*.{ts,js,mjs,cjs,vue}"',
-              useFlatConfig: true,
-            },
           },
           { server: false },
         ],
@@ -119,9 +111,7 @@ export default defineConfig((ctx) => {
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#framework
     framework: {
       config: {
-        notify: {
-          /* look at QuasarConfOptions from the API card */
-        },
+        notify: {/* look at QuasarConfOptions from the API card */},
         dark: 'auto',
       },
 

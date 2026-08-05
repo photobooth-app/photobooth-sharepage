@@ -11,7 +11,7 @@ import { useI18n } from 'vue-i18n'
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { mimeToExtension } from 'src/models/types'
+import { mimeToExtension } from '@/models/types'
 import { mdiShare } from '@quasar/extras/mdi-v7' //direct imports of icons instead embedding the whole font file
 import { mdiDownload } from '@quasar/extras/mdi-v7' //direct imports of icons instead embedding the whole font file
 import { useQuasar } from 'quasar'
@@ -56,7 +56,7 @@ async function loadFile() {
     `props.url=${props.url}`,
     `fileextensionDerivedFromContentType=${fileextensionDerivedFromContentType}`,
     `contentType=${contentType}`,
-    `outFilename=${outFilename}`,
+    `outFilename=${outFilename}`
   )
 
   return new File([blob], outFilename, { type: contentType || 'application/octet-stream' })
@@ -128,7 +128,7 @@ async function doShare() {
     navigator
       .share(shareFile)
       .then(() => console.log('success'))
-      .catch((error) => {
+      .catch(error => {
         // error is also if user aborts the process, so we just log to console but fail silently
         console.log('failed', error)
       })
@@ -137,7 +137,7 @@ async function doShare() {
     navigator
       .share()
       .then(() => console.log('success'))
-      .catch((error) => {
+      .catch(error => {
         // error is also if user aborts the process, so we just log to console but fail silently
         console.log('failed', error)
       })

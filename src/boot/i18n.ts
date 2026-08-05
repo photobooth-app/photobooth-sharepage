@@ -1,7 +1,7 @@
-import { defineBoot } from '#q-app/wrappers'
+import { defineBoot } from '#q-app'
 import { createI18n } from 'vue-i18n'
 import { usePreferredLanguages } from '@vueuse/core'
-import messages from 'src/i18n'
+import { default as messages } from '@/i18n'
 
 const preferredLanguages = usePreferredLanguages()
 

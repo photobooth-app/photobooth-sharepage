@@ -38,7 +38,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import MediaDisplayComponent from 'src/components/MediaDisplayComponent.vue'
+import MediaDisplayComponent from '@/components/MediaDisplayComponent.vue'
 
 const windowLocationHostname = window.location.hostname
 interface Props {
@@ -60,7 +60,7 @@ const validatedUrl = computed<URL | null>(() => {
       // means in the result, when comparing the hostname of window.location and givenUrl, if different its not local and then rejected.
 
       // in dev mode we want to test also on different hosts, browser might need cors everywhere plugin for hasslefree testing.
-      if (process.env.DEV) {
+      if (import.meta.env.QUASAR_DEV) {
         return givenUrl
       }
 

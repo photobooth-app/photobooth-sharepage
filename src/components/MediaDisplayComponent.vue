@@ -52,7 +52,7 @@
 
 <script setup lang="ts">
 import { watch, ref, onMounted } from 'vue'
-import { MediaStatus, MediaTypes } from 'src/models/types'
+import { MediaStatus, MediaTypes } from '@/models/types'
 import MediaPlayerComponent from './MediaPlayerComponent.vue'
 import MediaActionsComponent from './MediaActionsComponent.vue'
 interface Props {
@@ -110,10 +110,10 @@ watch(
   async (newVal, oldVal) => {
     console.log('url changed from', oldVal, 'to', newVal)
     await onUrlInitChanged()
-  },
+  }
 )
 
 onMounted(() => {
-  void onUrlInitChanged() // void since we do not want to wait for the mediatype detection. for dl.php it can take some time and nothing is rendered.
+  void onUrlInitChanged() // void since we do not want to wait for the mediatype detection. for api.php it can take some time and nothing is rendered.
 })
 </script>

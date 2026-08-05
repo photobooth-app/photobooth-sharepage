@@ -47,7 +47,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { MediaTypes } from 'src/models/types'
+import { MediaTypes } from '@/models/types'
 
 interface Props {
   url: URL
