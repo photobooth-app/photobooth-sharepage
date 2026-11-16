@@ -30,7 +30,7 @@
     "@types/node": "^25.9.5",
     "autoprefixer": "^10.5.4",
     "globals": "^17.9.0",
-    "oxfmt": "^0.60.0",
+    "oxfmt": "^0.78.0",
     "oxlint": "^1.77.0",
     "oxlint-tsgolint": "^7.0.2001",
     "prettier": "^3.9.6",
