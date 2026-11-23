@@ -28,7 +28,7 @@
     "@intlify/unplugin-vue-i18n": "^11.2.8",
     "@quasar/app-vite": "^3.10.4",
     "@types/node": "^26.0.0",
-    "autoprefixer": "^10.6.2",
+    "autoprefixer": "^10.7.0",
     "globals": "^17.14.0",
     "oxfmt": "^0.78.0",
     "oxlint": "^1.93.0",
